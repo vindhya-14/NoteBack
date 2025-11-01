@@ -97,67 +97,59 @@ export default function ReflectionForm() {
 
   const questions = [
     {
-      question:
-        "Looking back, what would you say are my most significant strengths or qualities that stood out to you?",
-      placeholder: "Think about moments where you saw me at my best...",
-      category: "Strengths & Qualities",
+      question: "Which three words best capture my essence or personality?",
+      placeholder: "E.g., compassionate, curious, determined...",
+      category: "Essence & Personality",
+    },
+    {
+      question: "What is an achievement of mine that genuinely made you proud?",
+      placeholder: "Think of a time I accomplished something meaningful...",
+      category: "Proud Moments",
     },
     {
       question:
-        "What's something you believe I should continue doing because it creates positive impact?",
-      placeholder:
-        "Consider habits, approaches, or behaviors that work well...",
-      category: "Continue Doing",
+        "What personal quality of mine do you find most admirable, and why?",
+      placeholder: "Reflect on traits that stand out to you...",
+      category: "Admirable Qualities",
     },
     {
       question:
-        "Is there anything you think I should consider changing or improving? Please be honest but kind.",
-      placeholder:
-        "Focus on specific behaviors or patterns that could be refined...",
-      category: "Improve/Change",
+        "Is there a moment we shared that you often think about? Why does it stand out to you?",
+      placeholder: "Describe a memory that felt special or meaningful...",
+      category: "Memorable Moments",
+    },
+    {
+      question: "In what ways do you think I can grow or develop further?",
+      placeholder: "Share any gentle advice or areas for growth...",
+      category: "Growth & Development",
+    },
+    {
+      question: "How do our conversations impact your mood or perspective?",
+      placeholder: "Do they uplift, inspire, challenge, or comfort you?",
+      category: "Conversations & Connection",
+    },
+    {
+      question: "What habits or attitudes of mine do you find inspiring?",
+      placeholder: "Something about my mindset, discipline, or values...",
+      category: "Inspiring Traits",
     },
     {
       question:
-        "Reflecting on our interactions, what's a specific moment or memory that you particularly valued?",
-      placeholder: "Describe why this moment was meaningful to you...",
-      category: "Valued Moments",
+        "Is there a song or piece of music that brings you memories of our relationship or time together?",
+      placeholder: "Share the song and why it connects to us...",
+      category: "Music & Memories",
     },
     {
       question:
-        "How would you describe the impact I have on others or the environment around me?",
-      placeholder:
-        "Think about the ripple effects of my actions or presence...",
-      category: "Impact",
+        "If you could compare me to any character from a book, TV show, or movie, who would it be, and what’s the reason?",
+      placeholder: "Be creative — what makes this comparison fitting?",
+      category: "Character Comparison",
     },
     {
       question:
-        "What's something you wish I knew about myself from your perspective?",
-      placeholder:
-        "This could be a strength I underestimate or a blind spot...",
-      category: "Perspective",
-    },
-    {
-      question:
-        "If you were to give me one piece of advice for my future growth, what would it be?",
-      placeholder: "Think long-term development and potential...",
-      category: "Growth Advice",
-    },
-    {
-      question: "What do you see as my unique contribution or special gift?",
-      placeholder: "What makes my presence or work distinctive...",
-      category: "Unique Contribution",
-    },
-    {
-      question:
-        "How have you seen me handle challenges, and what did that reveal about my character?",
-      placeholder: "Reflect on difficult situations you've observed...",
-      category: "Resilience",
-    },
-    {
-      question:
-        "Is there anything else you'd like to share that hasn't been covered? Any final thoughts or appreciation?",
-      placeholder: "This is your space for anything additional...",
-      category: "Closing Thoughts",
+        "Is there anything you wish I knew about how I affect your life, or any advice you’d want to give for my journey ahead?",
+      placeholder: "This is your space to share any final reflections...",
+      category: "Final Reflections",
     },
   ];
 
@@ -192,7 +184,6 @@ export default function ReflectionForm() {
           "url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00MjItMDczLWt6cGhnMjR1LmpwZw.jpg')",
       }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
@@ -216,7 +207,6 @@ export default function ReflectionForm() {
 
         {/* Main Form Card */}
         <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
-          {/* Header */}
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 p-8 text-center">
             <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
               <svg
@@ -246,19 +236,6 @@ export default function ReflectionForm() {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2 items-center gap-2">
-                  <svg
-                    className="w-4 h-4 text-blue-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
                   Your Name (Optional)
                 </label>
                 <input
@@ -272,19 +249,6 @@ export default function ReflectionForm() {
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2 items-center gap-2">
-                  <svg
-                    className="w-4 h-4 text-blue-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
                   Your Email (Optional)
                 </label>
                 <input
@@ -298,40 +262,26 @@ export default function ReflectionForm() {
               </div>
             </div>
 
-            {/* Questions Navigation */}
+            {/* Question Navigator */}
             <div className="flex items-center justify-between mb-6">
               <button
                 type="button"
                 onClick={prevQuestion}
                 disabled={currentQuestion === 0}
-                className="flex items-center gap-2 px-4 py-2 text-gray-600 disabled:text-gray-400 disabled:cursor-not-allowed hover:text-blue-600 transition-colors"
+                className="text-gray-600 hover:text-blue-600 disabled:text-gray-400"
               >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-                Previous
+                ← Previous
               </button>
 
               <div className="flex items-center gap-2">
-                {questions.map((_, index) => (
+                {questions.map((_, i) => (
                   <button
-                    key={index}
-                    type="button"
-                    onClick={() => setCurrentQuestion(index)}
-                    className={`w-3 h-3 rounded-full transition-all ${
-                      currentQuestion === index
+                    key={i}
+                    onClick={() => setCurrentQuestion(i)}
+                    className={`w-3 h-3 rounded-full ${
+                      currentQuestion === i
                         ? "bg-blue-500 scale-125"
-                        : "bg-gray-300 hover:bg-gray-400"
+                        : "bg-gray-300"
                     }`}
                   />
                 ))}
@@ -341,167 +291,59 @@ export default function ReflectionForm() {
                 type="button"
                 onClick={nextQuestion}
                 disabled={currentQuestion === questions.length - 1}
-                className="flex items-center gap-2 px-4 py-2 text-gray-600 disabled:text-gray-400 disabled:cursor-not-allowed hover:text-blue-600 transition-colors"
+                className="text-gray-600 hover:text-blue-600 disabled:text-gray-400"
               >
-                Next
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
+                Next →
               </button>
             </div>
 
             <form onSubmit={handleSubmit}>
-              {/* Current Question */}
               {renderQuestion(currentQuestion)}
 
-              {/* Navigation Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-8 pt-6 border-t border-gray-200">
                 {currentQuestion === questions.length - 1 ? (
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-4 rounded-xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 group"
+                    className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-4 rounded-xl font-semibold hover:scale-[1.02] transition-all"
                   >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        Sending Your Reflection...
-                      </>
-                    ) : (
-                      <>
-                        <svg
-                          className="w-5 h-5 transform group-hover:scale-110 transition-transform"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M13 10V3L4 14h7v7l9-11h-7z"
-                          />
-                        </svg>
-                        Send Complete Reflection
-                      </>
-                    )}
+                    {isSubmitting ? "Sending..." : "Send Complete Reflection"}
                   </button>
                 ) : (
                   <button
                     type="button"
                     onClick={nextQuestion}
-                    className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-4 rounded-xl transition-all duration-200 transform hover:scale-[1.02] shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
+                    className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-4 rounded-xl font-semibold hover:scale-[1.02] transition-all"
                   >
-                    Continue to Next Question
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
+                    Continue to Next Question →
                   </button>
                 )}
 
                 <button
                   type="button"
                   onClick={() => setCurrentQuestion(0)}
-                  className="px-6 py-4 border border-gray-300 text-gray-600 hover:bg-gray-50 rounded-xl transition-colors font-medium"
+                  className="px-6 py-4 border border-gray-300 text-gray-600 rounded-xl hover:bg-gray-50"
                 >
                   Restart
                 </button>
               </div>
             </form>
 
-            {/* Status Messages */}
             {status === "success" && (
-              <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-xl text-center animate-fade-in">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg
-                    className="w-6 h-6 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-green-800 font-bold text-lg mb-1">
-                  Reflection Sent Successfully!
-                </h3>
-                <p className="text-green-600">
-                  Thank you for sharing your thoughtful feedback.
-                </p>
+              <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-xl text-center">
+                ✅ Reflection Sent Successfully! Thank you for sharing.
               </div>
             )}
-
             {status === "error" && (
-              <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-xl text-center animate-fade-in">
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg
-                    className="w-6 h-6 text-red-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-red-800 font-bold text-lg mb-1">
-                  Failed to Send
-                </h3>
-                <p className="text-red-600">
-                  Please try again or check your connection.
-                </p>
+              <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-xl text-center">
+                ❌ Failed to Send. Please try again later.
               </div>
             )}
           </div>
         </div>
 
-        {/* Security Notice */}
-        <div className="mt-6 text-center">
-          <p className="text-sm text-white/80 flex items-center justify-center gap-2">
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-              />
-            </svg>
-            Your responses are anonymous and secure
-          </p>
+        <div className="mt-6 text-center text-white/80 text-sm">
+          🔒 Your responses are anonymous and secure
         </div>
       </div>
     </div>
