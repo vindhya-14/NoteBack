@@ -1,20 +1,23 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# NoteBack
 
-# Run and deploy your AI Studio app
+**NoteBack** is a modern and elegant platform that allows users to **share and receive anonymous reflections**.  
+Generate a personalized link to collect heartfelt feedback, appreciation, and insights from peers — beautifully and securely.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ysbF-6JVWsXxygHJUSHrC41y_cT0ewEu
+## 🚀 Features
 
-## Run Locally
+- 🎯 Generate unique reflection links instantly  
+- 💬 Receive anonymous reflections from friends or colleagues  
+- 💻 Clean, responsive, and modern UI  
+- 🌈 Animated background with elegant gradients  
+- 🔒 Secure email-based link generation  
 
-**Prerequisites:**  Node.js
+---
 
+## 🛠️ Tech Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **React / Next.js**
+- **TypeScript**
+- **Tailwind CSS**
+- **EmailJS** (for email integration)
