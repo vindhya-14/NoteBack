@@ -79,7 +79,7 @@ export default function CreatorForm() {
             NoteBack
           </h1>
           <p className="text-gray-600 mt-2 text-sm md:text-base">
-            Share & receive heartfelt anonymous reflections 💌
+            ✨ Gather meaningful feedback
           </p>
         </div>
 

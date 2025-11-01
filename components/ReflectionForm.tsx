@@ -227,7 +227,7 @@ export default function ReflectionForm() {
               NoteBack Reflection
             </h1>
             <p className="text-blue-100 text-lg">
-              Share your thoughtful feedback anonymously
+              Share your thoughtful feedback
             </p>
           </div>
 
@@ -236,12 +236,13 @@ export default function ReflectionForm() {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2 items-center gap-2">
-                  Your Name (Optional)
+                  Your Name
                 </label>
                 <input
+                  required
                   type="text"
                   name="from_name"
-                  placeholder="Enter your name or stay anonymous"
+                  placeholder="Enter your name"
                   value={formData.from_name}
                   onChange={handleChange}
                   className="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all duration-200 bg-white/50 backdrop-blur-sm"
@@ -249,9 +250,10 @@ export default function ReflectionForm() {
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2 items-center gap-2">
-                  Your Email (Optional)
+                  Your Email
                 </label>
                 <input
+                  required
                   type="email"
                   name="from_email"
                   placeholder="your.email@example.com"
